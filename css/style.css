@@ -205,27 +205,15 @@ button {
     height: 50px;
   }
   .arrow-up {
-    position: static;
-    position: absolute;
-    top: 115px;
-    right: 45px;
-    z-index: 1;
-    cursor: pointer;
+    top: 105px;
+    right: 55px;
     width: 30px;
-    -webkit-animation: opaque 1s, cart-rolls 2s ease-in 1s;
-    animation: opaque 1s, cart-rolls 2s ease-in 1s;
   }
+
   .arrow-down {
-    position: -webkit-sticky;
-    position: sticky;
-    position: absolute;
-    top: 385px;
-    right: 45px;
-    z-index: 1;
-    cursor: pointer;
+    top: 375px;
+    right: 55px;
     width: 30px;
-    -webkit-animation: opaque 1s, cart-rolls 2s ease-in 1s;
-    animation: opaque 1s, cart-rolls 2s ease-in 1s;
   }
 }
 /*# sourceMappingURL=style.css.map */
