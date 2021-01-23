@@ -17,10 +17,20 @@ function eventListeners(){
 }
 
 arrow2.addEventListener('click', ()=> {
-    cartContainer.scrollBy(0, 140);
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        cartContainer.scrollBy(0, 80);
+       
+      } else {
+        cartContainer.scrollBy(0, 140);
+      }
 })
 
 arrow1.addEventListener('click', ()=> {
-    cartContainer.scrollBy(0, -140);
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        cartContainer.scrollBy(0, -80);
+       
+      } else {
+        cartContainer.scrollBy(0, -140);
+      }
 })
 
