@@ -1,12 +1,8 @@
-:root {
-  --orange: #e99c2f;
-}
-
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -47,12 +43,12 @@ button {
   left: 0;
   right: 0;
   -webkit-box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.3);
   display: none;
   left: auto;
   right: 3rem;
   -webkit-animation: cart-rolls 1s ease-in-out;
-  animation: cart-rolls 1s ease-in-out;
+          animation: cart-rolls 1s ease-in-out;
 }
 
 .show-cart-container {
@@ -62,13 +58,13 @@ button {
 .cart-item {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr);
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -webkit-column-gap: 0.5rem;
-  column-gap: 0.5rem;
+          column-gap: 0.5rem;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   padding: 1.2rem 0.6rem;
   height: 140px;
@@ -83,7 +79,6 @@ button {
   text-align: center;
 }
 
-
 .cart-item-info span {
   display: block;
 }
@@ -94,35 +89,41 @@ button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
-  background: var(--orange);
+      justify-content: space-around;
   height: 140px;
 }
 
 .arrow-up {
+  position: static;
   position: absolute;
   top: 150px;
   right: 70px;
   z-index: 1;
   cursor: pointer;
   -webkit-animation: opaque 1s, cart-rolls 2s ease-in 1s;
-  animation: opaque 1s, cart-rolls 2s ease-in 1s;
+          animation: opaque 1s, cart-rolls 2s ease-in 1s;
 }
 
 .arrow-down {
+  position: -webkit-sticky;
+  position: sticky;
   position: absolute;
   top: 500px;
   right: 70px;
   z-index: 1;
   cursor: pointer;
   -webkit-animation: opaque 1s, cart-rolls 2s ease-in 1s;
-  animation: opaque 1s, cart-rolls 2s ease-in 1s;
+          animation: opaque 1s, cart-rolls 2s ease-in 1s;
 }
 
 .none {
@@ -132,22 +133,22 @@ button {
 @-webkit-keyframes cart-rolls {
   from {
     -webkit-transform: translateY(-50%) rotateZ(-10deg) rotateX(-90deg);
-    transform: translateY(-50%) rotateZ(-10deg) rotateX(-90deg);
+            transform: translateY(-50%) rotateZ(-10deg) rotateX(-90deg);
   }
   to {
     -webkit-transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
-    transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
+            transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
   }
 }
 
 @keyframes cart-rolls {
   from {
     -webkit-transform: translateY(-50%) rotateZ(-10deg) rotateX(-90deg);
-    transform: translateY(-50%) rotateZ(-10deg) rotateX(-90deg);
+            transform: translateY(-50%) rotateZ(-10deg) rotateX(-90deg);
   }
   to {
     -webkit-transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
-    transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
+            transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
   }
 }
 
@@ -176,13 +177,13 @@ button {
   .cart-item {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr);
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 0.5rem;
-    column-gap: 0.5rem;
+            column-gap: 0.5rem;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     padding: 1.2rem 0.6rem;
     height: 80px;
@@ -199,25 +200,40 @@ button {
   .arrow-up {
     position: absolute;
     top: 115px;
-    right: 42px;
+    right: 52px;
     z-index: 1;
     cursor: pointer;
     width: 30px;
     -webkit-animation: opaque 1s, cart-rolls 2s ease-in 1s;
-    animation: opaque 1s, cart-rolls 2s ease-in 1s;
+            animation: opaque 1s, cart-rolls 2s ease-in 1s;
   }
   .arrow-down {
     position: absolute;
     top: 385px;
-    right: 42px;
+    right: 52px;
     z-index: 1;
     cursor: pointer;
     width: 30px;
     -webkit-animation: opaque 1s, cart-rolls 2s ease-in 1s;
-    animation: opaque 1s, cart-rolls 2s ease-in 1s;
+            animation: opaque 1s, cart-rolls 2s ease-in 1s;
   }
   .empty-buttons {
     height: 80px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+.checkout-icons img {
+  width: 30px;
+}
+
+.img1 {
+  margin-right: 3.5rem;
+}
+
+.img2 {
+  margin-left: 4rem;
+}
+
+.edit-cart {
+  margin-right: 3rem;
+}
